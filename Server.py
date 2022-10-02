@@ -36,7 +36,7 @@ class Server:
 
 server = Server()
 
-start = websockets.serve(server.ws_head, 'localhost', 4000)
+start = websockets.serve(server.ws_head, '0.0.0.0', 80)
 loop = asyncio.get_event_loop()
 loop.run_until_complete(start)
 loop.run_forever()
